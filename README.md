@@ -1,2 +1,2 @@
-# copycat-netflix
-Followed DQ Choi's guidance on building a copy-cat Netflix using FastAPI and React
+# Book Recommending System
+Study DQ Choi's book and practice building a book recommendation system using FastAPI and React te reflect my learning
