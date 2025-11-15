@@ -1,5 +1,6 @@
 from typing import List, Optional
 from fastapi import FastAPI, Query
+from resolver import random_items, random_genres_items
 
 app = FastAPI()
 
@@ -9,11 +10,11 @@ async def root():
 
 @app.get("/all/")
 async def all_movies():
-    return {"message": "Test request all data"}
+    return {"message": random_items()}
 
 @app.get("/genres/{genre}")
 async def genre_movies(genre: str):
-    return {"message": f"genre: {genre}"}
+    return {"message": random_genres_items(genre)}
 
 @app.get("/user-based/")
 async def user_based(params: Optional[List[str]] = Query(None)):
